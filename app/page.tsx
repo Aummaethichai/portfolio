@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material";
+// import { Typography } from "@mui/material";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Newsสห่กฟาดก่หส่กดสห่กดส่กหาสดืาห่กืือราืำอ
             ฟหกสา่สำืดา่ืาฟอืสหก่าดรยำไ่ ยพรขบล  ๆไรพสาืห

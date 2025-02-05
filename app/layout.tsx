@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "../app/components/Footer/Footer"
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -27,17 +27,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto w-full`}
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased mx-auto w-full h-full`}
+        className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-800 dark:ring-zinc-300/20"
       >
-        <header className="w-full p-6">
+        <header className="w-full p-6 dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
           <Navbar/>
         </header>
-        <main className="pt-16">
+        <main className="dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20 flex-auto max-h-auto mt-16">
         {children}
         </main>
-        {/* <footer>
+        <footer className="mt-20 flex-none">
           <Footer />
-        </footer> */}
+        </footer>
       </body>
     </html>
   );
