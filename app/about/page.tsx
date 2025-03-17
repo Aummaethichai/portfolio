@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import GitHubIcon from "@mui/icons-material/GitHub";
 // import FacebookIcon from "@mui/icons-material/Facebook";
@@ -5,9 +6,11 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 // image
 import profileImage from "../../public/images/profile-picture.jpeg";
+import BlurText from "../components/BlurText/BlurText";
+// import DecryptedText from "../components/DecryptedText/DecryptedText";
 const AboutPage = () => {
   return (
-    <div className="mx-auto w-full max-w-7xl lg:px-8 max-h-auto sm:px-8 mt-16 sm:mt-32">
+    <div className="flex mx-auto w-full max-w-7xl lg:px-8 max-h-auto sm:px-8 mt-16 sm:mt-32">
       <div className="mx-auto w-full max-w-7xl lg:px-8">
         <div className="static px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
@@ -22,9 +25,22 @@ const AboutPage = () => {
                 </div>
               </div>
               <div className="lg:order-first lg:row-span-2">
-                <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-                  I’m Maethichai Kobkam.
-                </h1>
+                {/* <DecryptedText
+                  text="I'm Maethichai              Kobkam"
+                  animateOn="view"
+                  revealDirection="start"
+                  sequential={true}
+                  maxIterations={10}
+                  className="text-4xl font-bold mb-8 tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 text-wrapper hover:text-teal-500"
+                /> */}
+                <BlurText
+                  text="I'm Maethichai              Kobkam"
+                  delay={30}
+                  animateBy="letters"
+                  direction="top"
+                  // onAnimationComplete={handleAnimationComplete}
+                  className="text-4xl font-bold mb-8 tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 text-wrapper"
+                  />
               </div>
               <div className="lg:pl-20">
                 <div className="flex flex-col gap-4 pb-6">

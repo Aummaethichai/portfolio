@@ -196,7 +196,7 @@ const NavbarPage = () => {
         </div>
       </div>
       {short_menu && (
-        <div className="fixed w-full">
+        <div className="fixed w-full z-50">
           <div
             className="fixed inset-0 z-50 bg-zinc-800/40 backdrop-blur-sm duration-150 data-[closed]:opacity-0 data-[enter]:ease-out data-[leave]:ease-in dark:bg-black/80"
             id="headlessui-popover-backdrop-:Rjmiqja:"
