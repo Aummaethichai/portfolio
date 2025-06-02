@@ -7,8 +7,10 @@ import EmailIcon from "@mui/icons-material/Email";
 // image
 import profileImage from "../../public/images/profile-picture.jpeg";
 import BlurText from "../components/BlurText/BlurText";
+// import { useState } from "react";
 // import DecryptedText from "../components/DecryptedText/DecryptedText";
 const AboutPage = () => {
+  // const [textLine1Done, setTextLine1Done] = useState(false);
   return (
     <div className="flex mx-auto w-full max-w-7xl lg:px-8 max-h-auto sm:px-8 mt-16 sm:mt-32">
       <div className="mx-auto w-full max-w-7xl lg:px-8">
@@ -20,7 +22,8 @@ const AboutPage = () => {
                   <Image
                     alt="Maethichai"
                     src={profileImage}
-                    className="blur-[3px] rotate-[0.07rad] rounded-xl"
+                    // className="blur-[3px] rotate-[0.07rad] rounded-xl"
+                    className="rotate-[0.07rad] rounded-xl"
                   />
                 </div>
               </div>
@@ -34,13 +37,63 @@ const AboutPage = () => {
                   className="text-4xl font-bold mb-8 tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 text-wrapper hover:text-teal-500"
                 /> */}
                 <BlurText
-                  text="I'm Maethichai              Kobkam"
+                  text="I'm Maethichai"
                   delay={30}
                   animateBy="letters"
                   direction="top"
-                  // onAnimationComplete={handleAnimationComplete}
-                  className="text-4xl font-bold mb-8 tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 text-wrapper"
+                  // onAnimationComplete={() => setTextLine1Done(true)}
+                  className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 text-wrapper"
+                />
+                {/* <div
+                  className={`
+                    transition-opacity duration-500
+                    ${
+                      textLine1Done
+                        ? "opacity-100 visible"
+                        : "opacity-0 invisible"
+                    }
+                  `}
+                >
+                  <BlurText
+                    text="Kobkam"
+                    delay={30}
+                    animateBy="letters"
+                    direction="top"
+                    className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 text-wrapper"
                   />
+                </div> */}
+                 <BlurText
+                    text="Kobkam"
+                    delay={30}
+                    animateBy="letters"
+                    direction="bottom"
+                    className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100 text-wrapper"
+                  />
+                <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+                  <p className="leading-7">
+                    I’m currently working as a{" "}
+                    <strong>Software Engineer (Backend)</strong> with over 1
+                    year of professional experience.
+                    <br />
+                    Previously, I interned as a{" "}
+                    <strong>Frontend Engineer</strong> and had the opportunity
+                    to work on <strong>Full Stack</strong> projects as well.
+                    <br />
+                    These experiences gave me a solid understanding of both
+                    frontend and backend development.
+                    <br />
+                    <br />
+                    I’m passionate about system design, API development, and
+                    improving application performance.
+                    <br />
+                    I also enjoy learning new technologies and building side
+                    projects to strengthen my skills.
+                    <br />
+                    <br />
+                    <strong>Tech Stack:</strong> Node.js, Express, PostgreSQL,
+                    MongoDB, React, Docker
+                  </p>
+                </div>
               </div>
               <div className="lg:pl-20">
                 <div className="flex flex-col gap-4 pb-6">

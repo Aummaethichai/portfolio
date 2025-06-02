@@ -124,8 +124,11 @@ const NavbarPage = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="" href="/">
-                      <NavbarItem selected={pathname === "/"} label="Home" />
+                    <Link className="" href="/articles">
+                      <NavbarItem
+                        selected={pathname === "/articles"}
+                        label="Articles"
+                      />
                     </Link>
                   </li>
                   <li>
@@ -137,8 +140,7 @@ const NavbarPage = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      className="" href="/skills">
+                    <Link className="" href="/skills">
                       <NavbarItem
                         selected={pathname === "/skills"}
                         label="Skills"
@@ -278,7 +280,7 @@ const NavbarPage = () => {
                       onClick={handleMenu}
                     >
                       Expreience
-                    </Link> 
+                    </Link>
                     {/* รอแก้เป็น exprience */}
                   </li>
                   <li>
@@ -303,7 +305,7 @@ const NavbarPage = () => {
                       onClick={handleMenu}
                     >
                       Skills
-                    </Link> 
+                    </Link>
                   </li>
                   {/* <li>
                     <Link
