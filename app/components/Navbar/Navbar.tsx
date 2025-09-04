@@ -124,10 +124,10 @@ const NavbarPage = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="" href="/articles">
+                    <Link className="" href="/experience">
                       <NavbarItem
-                        selected={pathname === "/articles"}
-                        label="Articles"
+                        selected={pathname === "/experience"}
+                        label="experience"
                       />
                     </Link>
                   </li>

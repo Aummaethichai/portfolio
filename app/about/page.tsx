@@ -7,8 +7,29 @@ import EmailIcon from "@mui/icons-material/Email";
 // image
 import profileImage from "../../public/images/profile-picture.jpeg";
 import BlurText from "../components/BlurText/BlurText";
+import LogoLoop from "../components/LogoLoop/LogoLoop";
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiMongodb, SiPython, SiCss3, SiHtml5, SiRedis, SiMinio, SiMariadb, SiGoland, SiGithub, SiDocker } from 'react-icons/si';
 // import { useState } from "react";
 // import DecryptedText from "../components/DecryptedText/DecryptedText";
+
+const techLogos = [
+  { node: <SiReact />, title: "React", href: "https://react.dev" },
+  { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+  { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+  { node: <SiHtml5 />, title: "HTML5", href: "https://html.spec.whatwg.org/multipage/" },
+  { node: <SiCss3 />, title: "CSS3", href: "https://www.w3.org/Style/CSS/Overview.en.html" },
+  { node: <SiPython />, title: "Python", href: "https://www.python.org" },
+  { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+  { node: <SiPostgresql />, title: "PostgreSQL", href: "https://www.postgresql.org" },
+  { node: <SiMariadb />, title: "MariaDB", href: "https://mariadb.org" },
+  { node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com" },
+  { node: <SiMinio />, title: "Minio", href: "https://min.io" },
+  { node: <SiRedis />, title: "Redis", href: "https://redis.io" },
+  { node: <SiGoland />, title: "Go", href: "https://golang.org" },
+  { node: <SiGithub />, title: "GitHub", href: "https://github.com" },
+  { node: <SiDocker />, title: "Docker", href: "https://www.docker.com" },
+];
+
 const AboutPage = () => {
   // const [textLine1Done, setTextLine1Done] = useState(false);
   return (
@@ -131,6 +152,19 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div style={{ height: '100px', position: 'relative', overflow: 'hidden', marginTop: '50px' }}>
+          <LogoLoop
+            logos={techLogos}
+            speed={120}
+            direction="left"
+            logoHeight={48}
+            gap={40}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            ariaLabel="Technology partners"
+          />
         </div>
       </div>
     </div>
